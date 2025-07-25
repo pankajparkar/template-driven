@@ -104,20 +104,25 @@
       "type": "component",
       "changeDetection": "OnPush",
       "inlineStyle": true,
+      "inlineTemplate": true,
       "skipTests": true,
-      "skipSelector": false
+      "skipSelector": false,
+      "flat": true
     },
     "@schematics/angular:directive": {
       "type": "directive",
-      "skipTests": true
+      "skipTests": true,
+      "flat": true
     },
     "@schematics/angular:service": {
       "type": "service",
-      "skipTests": true
+      "skipTests": true,
+      "flat": true
     },
     "@schematics/angular:guard": {
       "typeSeparator": ".",
-      "skipTests": true
+      "skipTests": true,
+      "flat": true
     },
     "@schematics/angular:interceptor": {
       "typeSeparator": ".",
@@ -125,15 +130,18 @@
     },
     "@schematics/angular:module": {
       "typeSeparator": ".",
-      "skipTests": true
+      "skipTests": true,
+      "flat": true
     },
     "@schematics/angular:pipe": {
       "typeSeparator": ".",
-      "skipTests": true
+      "skipTests": true,
+      "flat": true
     },
     "@schematics/angular:resolver": {
       "typeSeparator": ".",
-      "skipTests": true
+      "skipTests": true,
+      "flat": true
     }
   }
 }
