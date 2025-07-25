@@ -1,16 +1,24 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { DashboardBaseDirective } from './dashboard-base.directive';
 
 @Component({
-  selector: 'td-dashboard-fancy',
+  selector: 'td-dashboard',
   imports: [],
   template: `
-    <p>
-      dashboard-fancy works!
-    </p>
+    <button (click)="base.add()">
+      Add
+    </button>
+    <button (click)="base.delete()">
+      Delete
+    </button>
+    <button (click)="base.update()">
+      Update
+    </button>
   `,
   styles: ``,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  hostDirectives: [DashboardBaseDirective],
 })
 export class DashboardFancyComponent {
-
+  public readonly base = inject(DashboardBaseDirective);
 }
