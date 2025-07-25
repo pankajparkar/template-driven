@@ -101,7 +101,12 @@
   },
   "schematics": {
     "@schematics/angular:component": {
-      "type": "component"
+      "type": "component",
+      "displayBlock": true,
+      "changeDetection": "OnPush",
+      "inlineStyle": true,
+      "skipTests": true,
+      "skipSelector": false
     },
     "@schematics/angular:directive": {
       "type": "directive"
